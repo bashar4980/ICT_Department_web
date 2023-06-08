@@ -41,13 +41,13 @@ const AdminLayout = () => {
               Notice
             </Link>
             <Link
-              to="/admin/notice"
+              to="/admin/events"
               className="flex items-center gap-2 rounded-lg px-4 py-2 font-semibold text-lg hover:bg-gray-300 hover:text-gray-700"
             >
               Event
             </Link>
             <Link
-              to="/admin/notice"
+              to="/admin/achieves"
               className="flex items-center gap-2 rounded-lg px-4 py-2 font-semibold text-lg hover:bg-gray-300 hover:text-gray-700"
             >
               Achievement

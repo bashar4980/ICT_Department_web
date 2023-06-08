@@ -7,7 +7,13 @@ import AdminLayout from "../layout/AdminLayout";
 import Notice from "../Pages/Admin/Notice";
 import Teachers from "../Pages/Admin/Teacher";
 import Staffs from "../Pages/Admin/Staff";
-// import Notice from "../Components/HomeComponent/Notice";
+import Events from "../Pages/Admin/Event";
+import Achievements from "../Pages/Admin/Achievement";
+import FaculityMember from "../Pages/AboutICT/FaculityMember";
+import StaffandOfficers from "../Pages/AboutICT/StaffandOfficers";
+import Department from "../Pages/AboutICT/Department";
+import NoticeContainer from "../Pages/Notice/Notice";
+
 
 
 const router = createBrowserRouter([
@@ -18,6 +24,18 @@ const router = createBrowserRouter([
         {
             path:"/",
             element:<Home></Home>
+        },{
+            path:"/faculty",
+            element:<FaculityMember></FaculityMember>
+        },{
+            path:"/staff",
+            element:<StaffandOfficers></StaffandOfficers>
+        },{
+            path:"/dept",
+            element:<Department></Department>
+        },{
+            path:"/notice",
+            element:<NoticeContainer></NoticeContainer>
         }
        ]
     },
@@ -42,6 +60,15 @@ const router = createBrowserRouter([
             },{
                 path:"/admin/staffs",
                 element:<Staffs></Staffs>
+            
+            } ,
+            {
+                path:"/admin/events",
+                element:<Events></Events>
+            }
+            ,{
+                path:"/admin/achieves",
+                element:<Achievements></Achievements>
             
             } 
         ]
