@@ -38,7 +38,7 @@ const HomeSlider = () => {
             <div className="overlay"></div>
             <div className="slide-content absolute top-[40%] left-[15%] z-[auto]">
               <h1 className="text-5xl text-white">
-                Lorem ipsum dolor sit amet.
+                Welcome To ICT Department
               </h1>
               <p className="text-[16px] text-white mt-5 w-[50%]">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
@@ -57,11 +57,10 @@ const HomeSlider = () => {
             <div className="overlay"></div>
             <div className="slide-content absolute top-[40%] left-[15%] z-[auto]">
               <h1 className="text-5xl text-white">
-                Lorem ipsum dolor sit amet.
+                Welcome to ICT Department
               </h1>
               <p className="text-[16px] text-white mt-5 w-[50%]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-                possimus suscipit facilis labore quidem consectetur!
+               
               </p>
             </div>
           </div>
