@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -23,27 +24,34 @@ const Navbar = () => {
             open ? "left-0 " : "left-[-100rem]"
           }`}
         >
-          <li className="md:pl-5 text-lg cursor-pointer font-semibold ">Home</li>
+          <li className="md:pl-5 text-lg cursor-pointer font-semibold ">
+            <Link to="/">Home</Link>
+          </li>
 
           <div className="dropdown  dropdown-hover">
           <li  tabIndex={0} className="md:pl-5 text-lg cursor-pointer font-semibold">About ICT</li>
         <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mr-10">
-          <li><a>Faculity</a></li> 
-          <li><a>Officers and Staffs</a></li>
-          <li><a>Department</a></li>
+          <li><Link to="/faculty">Faculity</Link></li> 
+          <li><a>Staff & Ofiicers</a></li>
+          <li><Link to="/dept">Department</Link></li>
+          
         </ul>
       </div>
-      <li className="md:pl-5 text-lg cursor-pointer font-semibold">Notices</li>
-      <div className="dropdown dropdown-hover">
+      <li className="md:pl-5 text-lg cursor-pointer font-semibold">
+        <Link to="/notice">Notice</Link>
+      </li>
+      {/* <div className="dropdown dropdown-hover">
           <li  tabIndex={1} className="md:pl-5 text-lg cursor-pointer font-semibold">Academic</li>
         <ul tabIndex={1} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mr-10">
           <li><a>Undergraduate Studies</a></li> 
           <li><a>Graduate Studies</a></li>
           <li><a>Evening Program</a></li>
         </ul>
-      </div>
+      </div> */}
      
-      <li className="md:pl-5 text-lg cursor-pointer font-semibold">Contract</li>
+      <li className="md:pl-5 text-lg cursor-pointer font-semibold">
+        <Link to="/contract">Contract</Link>
+      </li>
 
         </ul>
       </div>

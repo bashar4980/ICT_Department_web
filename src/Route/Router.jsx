@@ -13,6 +13,9 @@ import FaculityMember from "../Pages/AboutICT/FaculityMember";
 import StaffandOfficers from "../Pages/AboutICT/StaffandOfficers";
 import Department from "../Pages/AboutICT/Department";
 import NoticeContainer from "../Pages/Notice/Notice";
+import Message from "../Pages/Messages/Message";
+import Contract from "../Pages/Contract/Contract";
+
 
 
 
@@ -36,6 +39,12 @@ const router = createBrowserRouter([
         },{
             path:"/notice",
             element:<NoticeContainer></NoticeContainer>
+        },{
+            path:"/message",
+            element:<Message></Message>
+        },{
+            path:"/contract",
+            element:<Contract></Contract>
         }
        ]
     },

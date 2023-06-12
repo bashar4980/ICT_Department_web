@@ -10,7 +10,7 @@ const Event = () => {
          <div className="block overflow-hidden group lg:w-1/2  w-full">
          <img
               alt="Office"
-              src="https://scontent.fdac137-1.fna.fbcdn.net/v/t39.30808-6/335045677_539124191420738_1042549399981532264_n.jpg?stp=dst-jpg_s960x960&_nc_cat=108&ccb=1-7&_nc_sid=340051&_nc_ohc=re72Y09hOoQAX9NFwep&_nc_ht=scontent.fdac137-1.fna&oh=00_AfDw8VVsBqwNt_cMA3G1oMUCngQllkFRIg7PhMez1SljBQ&oe=647CCD82"
+              src="https://i.ibb.co/vzYhrFW/event01.jpg"
               className="w-full object-cover transition duration-1000 group-hover:scale-125 cursor-pointer"
             />
          </div>

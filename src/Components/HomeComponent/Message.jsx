@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom";
 import Notice from "./Notice";
 
 const Message = () => {
   return (
     <div className="container mx-auto my-20 ">
-      <h1 className="text-center text-2xl">
+      <h1 className="text-center text-4xl">
         Welcome to the Dept. of Information & Communication Technology (ICT)
       </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-20 ">
         <div className="chairmain_content  ">
-          <article className="flex flex-col lg:flex-row rounded-lg border lg:h-80 border-gray-100 bg-white shadow-sm ">
+          <article className="shadow-xl transition hover:shadow-sm flex flex-col lg:flex-row rounded-lg border lg:h-80 border-gray-100 bg-white">
             <img
               alt="Office"
               src="https://www.iu.ac.bd/public/images/teacher/8720fbd3805c7a4541b20eef174b4666.jpg"
@@ -34,8 +35,8 @@ const Message = () => {
              
 
 
-              <a
-                href="#"
+              <Link
+                to="/message"
                 className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
               >
                 Read more
@@ -45,7 +46,7 @@ const Message = () => {
                 >
                   &rarr;
                 </span>
-              </a>
+              </Link>
             </div>
           </article>
         </div>

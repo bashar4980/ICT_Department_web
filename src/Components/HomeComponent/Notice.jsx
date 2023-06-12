@@ -1,42 +1,43 @@
+import useFetch from "../../Hook/useFetch";
+import { Link } from "react-router-dom";
+
 const Notice = () => {
+
+  const {data , isLoading , error} = useFetch(
+    "http://localhost:3000/notices", "notices"
+
+  )
+
+  
+  if (isLoading) return 'Loading...'
+
+  if (error) return 'An error has occurred: ' + error.message
   return (
     <div>
-      <article className="rounded-xl bg-gradient-to-r  from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:shadow-sm">
+      <article className="rounded-xl  p-0.5 shadow-xl transition hover:shadow-sm">
         <div className="rounded-[10px] bg-white p-4  lg:h-80">
           <h1 className="text-2xl font-bold mb-5">Recent Notice</h1>
           <div className="notice_content">
             <time className="block text-xs text-gray-500">10th Oct 2022</time>
 
-            <a href="#">
+           
+            {
+              data && data.map(notice =>{
+                return(
+                  <>
+                  <a href="#" key={notice._id}>
               <h3 className="mt-0.5 font-medium text-gray-900">
-                অত্র বিভাগের ২০২১-২০২২ শিক্ষাবর্ষের বিএসসি (ইঞ্জিনিয়ারিং) প্রথম
-                সেমিস্টার পরীক্ষা -২০২২ এর...
+                {notice.Name}
               </h3>
-            </a>
+            </a></>
+                )
+              })
+            }
           </div>
-          <div className="notice_content my-5">
-            <time className="block text-xs text-gray-500">10th Oct 2022</time>
+         
 
-            <a href="#">
-              <h3 className="mt-0.5 font-medium text-gray-900">
-                অত্র বিভাগের ২০২১-২০২২ শিক্ষাবর্ষের বিএসসি (ইঞ্জিনিয়ারিং) প্রথম
-                সেমিস্টার পরীক্ষা -২০২২ এর...
-              </h3>
-            </a>
-          </div>
-          <div className="notice_content">
-            <time className="block text-xs text-gray-500">10th Oct 2022</time>
-
-            <a href="#">
-              <h3 className="mt-0.5 font-medium text-gray-900">
-                অত্র বিভাগের ২০২১-২০২২ শিক্ষাবর্ষের বিএসসি (ইঞ্জিনিয়ারিং) প্রথম
-                সেমিস্টার পরীক্ষা -২০২২ এর...
-              </h3>
-            </a>
-          </div>
-
-          <a
-            href="#"
+          <Link
+            to="/notice"
             className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
           >
             All Notices
@@ -46,7 +47,8 @@ const Notice = () => {
             >
               &rarr;
             </span>
-          </a>
+          </Link>
+          
         </div>
       </article>
     </div>

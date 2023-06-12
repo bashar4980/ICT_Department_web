@@ -1,10 +1,16 @@
 import { useForm } from "react-hook-form";
+import useFetch from "../../Hook/useFetch"
+
+
 const Teachers = () => {
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+
 
   const teacherHandelsubmit = (data) => {
     const Api_key = "2483b2c42ba1fe0a6537341b25506478";
@@ -24,7 +30,9 @@ const Teachers = () => {
           email: data.email,
           Image: imgData.data.url,
         };
+  
         if (imgData.success)
+                
           fetch("http://localhost:3000/teacher", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -36,13 +44,26 @@ const Teachers = () => {
               alert("Add Successfully")
             }
           })
+        
+       
+      
+        
       });
   };
+  const {data , isLoading , error} = useFetch(
+    "http://localhost:3000/teachers", "teachers"
 
+  )
+
+  
+  if (isLoading) return 'Loading...'
+
+  if (error) return 'An error has occurred: ' + error.message
+  
   return (
     <div className="addnotice_container mt-20">
       <div className="all_teachers">
-        <div className="addNotice flex justify-center mb-5">
+        <div className="addteahers flex justify-center mb-5">
           {/* Add teachers form  */}
 
           <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
@@ -108,14 +129,27 @@ const Teachers = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Cy Ganderton</td>
-                  <td>Assistance</td>
-                  <button className="btn btn-warning btn-sm mr-5 mt-2 ">
-                    Edit
-                  </button>
-                  <button className="btn btn-warning btn-sm ">Delete</button>
-                </tr>
+                {
+                 data && 
+                 
+                 
+                   data.map(teacher => {
+                    return(
+                      <tr key={teacher._id}>
+                      <td>{teacher.Name}</td>
+                      <td>{teacher.title}</td>
+                      <button className="btn btn-warning btn-sm mr-5 mt-2 ">
+                        Edit
+                      </button>
+                      <button className="btn btn-warning btn-sm ">Delete</button>
+                    </tr>
+                    )
+                  })
+                 
+                 
+              
+                }
+              
               </tbody>
             </table>
           </div>
