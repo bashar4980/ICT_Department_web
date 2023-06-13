@@ -28,30 +28,14 @@ const AdminLayout = () => {
             >
               Add Teacher
             </Link>
-            <Link
-              to="/admin/staffs"
-              className="flex items-center gap-2 rounded-lg px-4 py-2 font-semibold text-lg hover:bg-gray-300 hover:text-gray-700"
-            >
-              Add Staff and Officers
-            </Link>
+          
             <Link
               to="/admin/notice"
               className="flex items-center gap-2 rounded-lg px-4 py-2 font-semibold text-lg hover:bg-gray-300 hover:text-gray-700"
             >
               Notice
             </Link>
-            <Link
-              to="/admin/events"
-              className="flex items-center gap-2 rounded-lg px-4 py-2 font-semibold text-lg hover:bg-gray-300 hover:text-gray-700"
-            >
-              Event
-            </Link>
-            <Link
-              to="/admin/achieves"
-              className="flex items-center gap-2 rounded-lg px-4 py-2 font-semibold text-lg hover:bg-gray-300 hover:text-gray-700"
-            >
-              Achievement
-            </Link>
+           
           </ul>
         </div>
       </div>

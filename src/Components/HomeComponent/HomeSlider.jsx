@@ -21,7 +21,7 @@ const HomeSlider = () => {
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         loop={true}
-        autoplay={{delay:100000}}
+        autoplay={{delay:3000}}
         spaceBetween={50}
         navigation
         effect={"fade"}
@@ -32,7 +32,7 @@ const HomeSlider = () => {
         <SwiperSlide>
           <div className="slider-img">
             <img
-              className="w-full h-[70vh] relative"
+              className="w-full h-[80vh] relative"
               src="https://i.ibb.co/7b0KhBD/IMG-1192.jpg"
               alt="img"
             />
@@ -60,7 +60,7 @@ const HomeSlider = () => {
         <SwiperSlide>
           <div className="slider-img">
             <img
-              className="w-full h-[70vh] relative"
+              className="w-full h-[80vh] relative"
               src="https://scontent.fdac137-1.fna.fbcdn.net/v/t1.15752-9/343603200_1299540497577390_1479259319954609498_n.png?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_ohc=8aVF3TytvLIAX9bYHi_&_nc_ht=scontent.fdac137-1.fna&oh=03_AdQD1YcXAa82gn3Uzq8Wb2w3AQKDd8hUuVfnvNxyd-vvqA&oe=649EF70B"
               alt="img"
             />
@@ -78,7 +78,7 @@ const HomeSlider = () => {
         <SwiperSlide>
           <div className="slider-img">
             <img
-              className="w-full h-[70vh] relative"
+              className="w-full h-[80vh] relative"
               src="https://scontent.fdac137-1.fna.fbcdn.net/v/t1.15752-9/345131175_972140737564169_331539402001349021_n.png?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_ohc=ruAV9NVph8cAX_A1Qr6&_nc_ht=scontent.fdac137-1.fna&oh=03_AdRAJ6cF08G9v5e08SQ9mkiRn0d2MYbXo8OJSYv7Vd9JFg&oe=649ED638"
               alt="img"
             />
@@ -96,7 +96,7 @@ const HomeSlider = () => {
         <SwiperSlide>
           <div className="slider-img">
             <img
-              className="w-full h-[70vh]  relative"
+              className="w-full h-[80vh]  relative"
               src="https://scontent.fdac137-1.fna.fbcdn.net/v/t1.15752-9/343270640_800872481465778_1403355273479991441_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=1k8y-YFBNA0AX99JAN3&_nc_ht=scontent.fdac137-1.fna&oh=03_AdSRHvao8xmG70DMHjozJiqsKwORPbQ9Qj4wOC2ObXu0CA&oe=649EF576"
               alt="img"
             />

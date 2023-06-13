@@ -2,7 +2,7 @@
 function Admin() {
   return (
     <div>
-        <h1>I am Admin Page</h1>
+        <h1 className="text-2xl">Welcome To ICT Department Admin Pannel</h1>
     </div>
   )
 }
