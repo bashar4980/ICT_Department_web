@@ -59,6 +59,21 @@ const Notice = () => {
   if (isLoading) return 'Loading...'
 
   if (error) return 'An error has occurred: ' + error.message
+
+  const deleteHandeler =(data)=>{
+   
+    fetch(`http://localhost:3000/notices/${data._id}`,{
+      method: 'DELETE', 
+    })
+    .then(res => res.json())
+    .then(data => {
+        if(data.deletedCount > 0){
+            
+           alert("Successfully delete")
+        }
+    })
+    
+  }
   
   return (
     <div className="addnotice_container mt-20">
@@ -132,10 +147,10 @@ const Notice = () => {
                       <tr key={notice._id}>
                       <td>{notice.Name}</td>
                       
-                      <button className="btn btn-warning btn-sm mr-5 mt-2 ">
-                        Edit
-                      </button>
-                      <button className="btn btn-warning btn-sm ">Delete</button>
+                    
+                      <button onClick={()=>{
+                        deleteHandeler(notice)
+                      }} className="btn btn-warning btn-sm ">Delete</button>
                     </tr>
                     )
                   })

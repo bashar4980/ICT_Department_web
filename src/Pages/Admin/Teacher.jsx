@@ -59,6 +59,22 @@ const Teachers = () => {
   if (isLoading) return 'Loading...'
 
   if (error) return 'An error has occurred: ' + error.message
+
+  const deleteHandeler =(data)=>{
+    
+   
+    fetch(`http://localhost:3000/teachers/${data}`,{
+      method: 'DELETE', 
+    })
+    .then(res => res.json())
+    .then(data => {
+        if(data.deletedCount > 0){
+            
+           alert("Successfully delete")
+        }
+    })
+    
+  }
   
   return (
     <div className="addnotice_container mt-20">
@@ -138,10 +154,10 @@ const Teachers = () => {
                       <tr key={teacher._id}>
                       <td>{teacher.Name}</td>
                       <td>{teacher.title}</td>
-                      <button className="btn btn-warning btn-sm mr-5 mt-2 ">
-                        Edit
-                      </button>
-                      <button className="btn btn-warning btn-sm ">Delete</button>
+                      
+                      <button onClick={()=>{
+                        deleteHandeler(teacher._id)
+                      }} className="btn btn-warning btn-sm ">Delete</button>
                     </tr>
                     )
                   })
